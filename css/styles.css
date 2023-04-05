@@ -5,6 +5,8 @@
   --background-btn-color:#F4F4FD;
   --nav-color:#2e2f42; 
   --link-color: #434455;
+  --transition-duration: 250ms linear;
+  --tra: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 body {
   font-family: 'Roboto', sans-serif;
@@ -60,6 +62,8 @@ ul{
   display:flex;
 
 }
+
+
 .address-list
 {
   display:flex;
@@ -270,11 +274,27 @@ fill: #FFFFFF;
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: var(--nav-color);
+
 }
 .nav-item:is(:hover, :focus)
 {
   color:#404BBF;
 }
+.active-page.nav-item::after{
+  background-color: var(--logo-color);
+}
+
+.nav-item::after
+{
+  content: '';
+  display: block;
+  margin-top: 25px;
+  height: 4px;
+  border-radius: 2px;
+  background-color: transparent;
+}
+
+
 .result-list-object
 {
 font-size: 16px;
@@ -294,10 +314,7 @@ color: #434455;
   color: #2E2F42;
 }
 
-.main-list-item {
-width: calc((100% - 72px) / 4) ;
-   
-}
+
 
 
 .list-object {  
