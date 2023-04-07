@@ -22,9 +22,9 @@
       <a href="./index.html" class="logo link"> Web<span class="header-logo-item">Studio</span></a>
       
       <ul class="nav-list list">
-        <li class="nav-list-item"><a class="link nav-item active-page" href="./index.html">Studio</a></li>
-        <li class="nav-list-item"><a class="link nav-item active-page" href="./portfolio.html">Portfolio</a></li>
-        <li class="nav-list-item"><a class="link nav-item active-page" href="">Contacts</a></li>
+        <li class="nav-list-item "><a class="link nav-item current-page" href="./index.html">Studio</a></li>
+        <li class="nav-list-item"><a class="link nav-item " href="./portfolio.html">Portfolio</a></li>
+        <li class="nav-list-item"><a class="link nav-item " href="">Contacts</a></li>
 
       </ul>
     </nav>
@@ -42,7 +42,7 @@
     <section class="main-first-section">
      <div class="container">
       <h1 class="top-section-head">Effective Solutions for Your Business</h1>
-      <button class="main-btn" type="button">Order Service</button>
+      <button class="main-btn" type="button" data-modal-open>Order Service</button>
     </div>
     </section>
     
@@ -311,7 +311,14 @@
   </div>
     </div>
   </footer>
-<script></script>
+  <div class="backdrop is-hidden" data-modal>
+    <div class="modal">
+      <button data-modal-close type="button" class="modal-close-btn" ><svg class="modal-close-icon">
+        <use href="./images/icons.svg#icon-close-black"></use>
+      </svg></button>
+    </div>
+  </div>
+  <script src="./js/modal.js"></script>
 </body>
 
 </html>
