@@ -96,7 +96,7 @@ ul{
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: #434455;
-  transition: var(--transition-duration);
+  transition: color var(--transition-duration);
 }
 .address-list-item:is(:hover, :focus)
 {
@@ -183,7 +183,7 @@ ul{
 .result-link
 {
   display: block;
-  transition: var(--transition-duration);
+  transition: color var(--transition-duration);
 }
 
 .portfolio-card     
@@ -215,11 +215,11 @@ ul{
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: #F4F4FD;
-  background: rgba(0, 0, 255, 0.7);
+  background: #4D5AE5;
   padding: 40px 32px;
   height: 100%;
   transform: translatey(100%);
-  transition: var(--transition-duration);
+  transition: translatey var(--transition-duration);
   overflow: auto;
   
 }
@@ -264,7 +264,7 @@ background: #4D5AE5;
 display: flex;
 align-items: center;
 justify-content: center;
-transition: var(--transition-duration);
+transition: background-color var(--transition-duration);
 }
 .person-soc-icon
 {
@@ -292,7 +292,7 @@ fill: #FFFFFF;
   border: 1px solid #E7E9FC;
   padding: 12px 24px;
   border-radius: 4px;
-  transition: var(--transition-duration);
+  transition: box-shadow var(--transition-duration), color var(--transition-duration), background-color var(--transition-duration),border-color var(--transition-duration),;
   
 }
 
@@ -313,16 +313,16 @@ fill: #FFFFFF;
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: var(--nav-color);
-  transition: var(--transition-duration);
+  transition: color var(--transition-duration);
 
 }
 .nav-item:is(:hover, :focus)
 {
   color:#404BBF;
-}
+} 
 .current-page
 {
-  color: #2E2F42;
+  color: #404BBF;
   position: relative;
 }
 .current-page::after
@@ -334,7 +334,7 @@ fill: #FFFFFF;
   border-radius: 2px;
   position: absolute;
   left: 0;
-  margin-top: 44px;
+  bottom: -1px;
 
 }
 .result-list-object
@@ -429,7 +429,7 @@ color: var(--nav-color);
   justify-content: center;
   display: flex;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-  transition: var(--transition-duration);
+  transition: background-color var(--transition-duration);
 }
 .main-btn:is(:hover, :focus)
 {
@@ -566,12 +566,11 @@ text-transform: uppercase;
   height: 88px;
   border: 1px solid #8E8F99;
   border-radius: 4px;
-  transition: var(--transition-duration);
+  transition: fill var(--transition-duration), border-color var(--transition-duration);
 }
 .customers-link:is(:hover,:focus)
 {
-  border: 1px solid #404BBF;
-  border-radius: 4px;
+  border-color: #404BBF;
   fill: #404BBF;
 }
 .customers-link:is(:hover,:focus)>.customer-icon
@@ -656,7 +655,7 @@ gap: 120px;
     display: flex;
     align-items: center;
     justify-content: center;
-    transition: var(--transition-duration);
+    transition: background-color var(--transition-duration);
     }
 
 .footer-soc-link:is(:hover, :focus)
@@ -668,7 +667,7 @@ gap: 120px;
 
 .backdrop
 {
-  background-color: rgba(0, 0, 0, 0.08);
+  background: rgba(46, 47, 66, 0.4);
   position:fixed;
   top: 0;
  height: 100%;
@@ -679,7 +678,7 @@ gap: 120px;
 {
 position: absolute;
 width: 408px;
-min-height: 500px;
+min-height: 576px;
 left: 50%;
 top: 50%;
 transform: translate(-50%, -50%) scaleY(1) ;
@@ -704,7 +703,12 @@ border-radius: 4px;
   background: #E7E9FC;
   border: 1px solid rgba(0, 0, 0, 0.1);
   cursor: pointer;
-  
+  transition: background-color var(--transition-duration), fill var(--transition-duration) ;
+}
+.modal-close-btn:is(:hover,:focus)
+{
+  background-color: #404BBF;
+  fill:#FFFFFF;
 }
 .modal-close-icon
 {
