@@ -158,10 +158,12 @@ ul{
 {
   display: flex;
   gap: 24px;
-  
   font-family: 'Roboto';
   font-style: normal;
-  
+}
+.main-list-item
+{
+  width: calc((100% - 72px) / 4);
 }
 .result-list
 {
@@ -175,15 +177,20 @@ ul{
   width: calc((100% - 48px) / 3);
 }
 
-.result-link:is(:hover, :focus )  
+.result-link:is(:hover, :focus )
 {
-  
   box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
 }
+.result-link:is(:hover, :focus) .card-cover-text
+{
+  transform: translatey(0);
+}
+
+
 .result-link
 {
   display: block;
-  transition: color var(--transition-duration);
+  transition: box-shadow var(--transition-duration);
 }
 
 .portfolio-card     
@@ -196,10 +203,6 @@ ul{
 }
 
 
-.result-link :is(:hover, :focus)>.card-cover-text
-{
-  transform: translatey(0);
-}
 
 .cover-card
 {
@@ -219,7 +222,7 @@ ul{
   padding: 40px 32px;
   height: 100%;
   transform: translatey(100%);
-  transition: translatey var(--transition-duration);
+  transition: transform var(--transition-duration);
   overflow: auto;
   
 }
